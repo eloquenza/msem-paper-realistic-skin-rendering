@@ -1,7 +1,12 @@
-sources = paper.tex
+paper = paper.tex
+cfp = call-for-papers.tex
+sources = $(paper) $(cfp)
 llncs-class = llncs.cls
 
 .PHONY: clean reformat split-sentences indent
+
+paper: $(paper)
+	latexmk $<
 
 compile: $(sources)
 	latexmk $(sources)
