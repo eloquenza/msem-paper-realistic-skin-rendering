@@ -45,21 +45,20 @@
   \llncs{book editors and title}{0042} %% 0042 is the start page
 \fi
 
-% For demonstration purposes only
-\usepackage[math]{blindtext}
-\usepackage{mwe}
-
 \begin{document}
 
-\title{Paper Title}
+\title{Realitische Echtzeitdarstellung von Haut unter Betrachtung physikalischer Grundlagen}
 %If Title is too long, use \titlerunning
-%\titlerunning{Short Title}
+\titlerunning{Realitische Echtzeitdarstellung von Haut}
 
 %Single insitute
-\author{Firstname Lastname \and Firstname Lastname}
+\author{Dennis Grabowski, B.Sc.}
 %If there are too many authors, use \authorrunning
-%\authorrunning{First Author et al.}
-\institute{Institute}
+\authorrunning{D. Grabowski}
+
+\institute{Hochschule Hannover, Ricklinger Stadtweg 120, 30459 Hannover, Germany\\
+\email{dennis.grabowski@stud.hs-hannover.de}\\
+\url{https://f4.hs-hannover.de/}}
 
 %% Multiple insitutes - ALTERNATIVE to the above
 % \author{%
@@ -80,156 +79,36 @@
 \maketitle
 
 \begin{abstract}
-  \lipsum[1]
+  Unter dem typischen Phong-Modell ist es schwer, verschiedenste Materialien wie Marmor, Wachs, Blätter oder Haut realistisch dar\-zu\-stellen.
+  Zugrunde liegt, dass das Phong-Modell nur ein empirisches Model ist und keineswegs ein physikalisch haargenaues Modell darstellt, wodurch verschiedenste physikalische Effekte schlichtweg nicht nachstellbar sind.
+  Diese Ausarbeitung wird ausleuchten, welche Schwierigkeiten sich ergeben, Haut realistisch darzustellen und welche Konzepte helfen, diesen Realismus wiedergeben zu können.
+  Haut als Medium bietet sich besonders an, um an diese Konzepte heranzugehen, da jedem Leser hoffentlich eine realistische Präsentation dieser bekannt ist.
+  Hierfür wird zunächst aufgezeigt, wie Licht mit Haut interagiert, um darauf basierend herauszuarbeiten, welche Bildverarbeitungskonzepte nötig sind, um die Defizite des Phong-Modells aufzufangen.
+  Anschliessend werden physikalisch-basierte Beleuchtungsmodelle vorgestellt, welche die Reflektion des Lichts durch die Haut sowie das Eindringen des Lichts in die Haut realistisch abbilden können.
+  Dazu werden die Bidirektionale Reflexionsverteilungsfunktion von Kelemen and Szirmay-Kalos, die für die realistische Oberflächenreflexion zuständig ist, und das Subsurface Scattering, welches das Eintreten und dem darauffolgendem Austreten des Lichts in die Haut möglichst realistisch simuliert, vorgestellt.
+  Nachfolgend werden Bilder verschiedenster Implementationen miteinander vergliechen, um die Wirkung dieser Konzepte besser einschätzen zu können.
 \end{abstract}
 
 \begin{keywords}
-  keyword1, keyword2
+  Computer graphics, physically-based rendering, BRDFs, subsurface scattering, diffusion profiles
 \end{keywords}
 
-\section{Introduction}\label{sec:intro}
-\lipsum[1-3]\todo{Refine me}
+\section{Prologue}
+\label{sec:intro}
 
-The remainder of the paper starts with a presentation of related work (\cref{sec:relatedwork}).
-It is followed by a presentation of hints on \LaTeX{} (\cref{sec:hints}).
-Finally, a conclusion is drawn and outlook on future work is made (\cref{sec:outlook}).
+\section{Subsurface scattering}
+\label{sec:intro}
 
-\section{Related Work}
-\label{sec:relatedwork}
+\section{Application of aforementioned theoretical concepts}
+\label{sec:application}
 
-Winery~\cite{Winery} is a graphical \commentontext{modeling}{modeling with one \qq{l}, because of AE} tool.
-The whole idea of TOSCA is explained by \citet{Binz2009}.
-
-\section{LaTeX Hints}
-\label{sec:hints}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=.8\textwidth]{example-image-golden}
-  \caption{Simple Figure. \cite[based on][]{mwe}}
-  \label{fig:simple}
-\end{figure}
-
-\begin{table}
-  \caption{Simple Table}
-  \label{tab:simple}
-  \centering
-  \begin{tabular}{ll}
-    \toprule
-    Heading1 & Heading2 \\
-    \midrule
-    One      & Two      \\
-    Thee     & Four     \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-\begin{lstlisting}[
-  % one can adjust spacing here if required
-  % aboveskip=2.5\baselineskip,
-  % belowskip=-.8\baselineskip,
-  caption={Example Java Listing},
-  label=L1,
-  language=Java,
-  float]
-public class Hello {
-    public static void main (String[] args) {
-        System.out.println("Hello World!");
-    }
-}
-\end{lstlisting}
-
-\begin{lstlisting}[
-  % one can adjust spacing here if required
-  % aboveskip=2.5\baselineskip,
-  % belowskip=-.8\baselineskip,
-  caption={Example XML Listing},
-  label=L2,
-  language=XML,
-  float]
-<example attr="demo">
-  text content
-</example>
-\end{lstlisting}
-
-\begin{listing}[htbp]
-  \begin{minted}[linenos=true,escapeinside=||]{java}
-public class Hello {
-    public static void main (String[] args) {
-        System.out.println("Hello World!");
-    }
-}
-\end{minted}
-  \caption{Java code rendered using minted}
-  \label{lst:java}
-\end{listing}
-
-\begin{listing}[htbp]
-  \begin{minted}[linenos=true,escapeinside=||]{xml}
-<demo>
-  <node>
-    <!-- comment --> |\Vlabel{commentline}|
-  </node>
-</demo>
-\end{minted}
-  \caption{XML-Dokument rendered using minted}
-  \label{lst:xml}
-\end{listing}
-
-\Cref{L1,L2} show listings typeset using the \texttt{lstlisting} environment.
-
-\href{https://github.com/gpoore/minted}{minted} is an alternative package, which enables syntax highlighting using \href{http://pygments.org/}{pygments}.
-This, in turn, requires Python, so it is disabled by default.
-In case you load it above, be sure to run pdflatex with \texttt{-shell-escape} option.
-\Cref{lst:java,lst:xml} show listings rendered using minted.
-You can point to a single line: \lref{commentline}.
-
-cref Demonstration: Cref at beginning of sentence, cref in all other cases.
-
-\Cref{fig:simple} shows a simple fact, although \cref{fig:simple} could also show something else.
-
-\Cref{tab:simple} shows a simple fact, although \cref{tab:simple} could also show something else.
-
-\Cref{sec:intro} shows a simple fact, although \cref{sec:intro} could also show something else.
-
-Brackets work as designed:
-<test>
-One can also input backquotes in verbatim text: \verb|`test`|.
-
-The symbol for powerset is now correct: $\powerset$ and not a Weierstrass p ($\wp$).
-
-\begin{inparaenum}
-  \item All these items...
-  \item ...appear in one line
-  \item This is enabled by the paralist package.
-\end{inparaenum}
-
-Please use the \qq{qq command} or the \enquote{enquote command} to quote something.
-``something in quotes'' using plain tex syntax also works.
-
-You can now write words containing hyphens which are hyphenated (application"=specific) at other places.
-This is enabled by an additional configuration of the babel package.
-In case you write \qq{application-specific}, then the word will only be hyphenated at the dash.
-You can also write applica\allowbreak{}tion-specific, but this is much more effort.
-
-The words \qq{workflow} and \qq{dwarflike} can be copied from the PDF and pasted to a text file.
-
-Numbers can written plain text (such as 100), by using the siunitx package like that:
-\SI{100}{\km\per\hour},
-or by using plain \LaTeX{} (and math mode):
-$100 \frac{\mathit{km}}{h}$.
+\section{Evaluation and discussion}
+\label{sec:evalanddiscuss}
 
 \section{Conclusion and Outlook}
 \label{sec:outlook}
-\lipsum[1-2]
 
-\subsubsection*{Acknowledgments}
-\ldots
-
-In the bibliography, use \texttt{\textbackslash textsuperscript} for \qq{st}, \qq{nd}, \ldots:
-E.g., \qq{The 2\textsuperscript{nd} conference on examples}.
-When you use \href{https://www.jabref.org}{JabRef}, you can use the clean up command to achieve that.
-See \url{https://help.jabref.org/en/CleanupEntries} for an overview of the cleanup functionality.
+\nocite{*}
 
 \renewcommand{\bibsection}{\section*{References}} % requried for natbib to have "References" printed and as section*, not chapter*
 % Use natbib compatbile splncsnat style.
@@ -250,5 +129,5 @@ See \url{https://help.jabref.org/en/CleanupEntries} for an overview of the clean
 % Enfore empty line after bibliography
 \ \\
 %
-All links were last followed on October 5, 2017.
+All links were last followed on April 30, 2020.
 \end{document}
