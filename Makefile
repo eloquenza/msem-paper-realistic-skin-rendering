@@ -1,12 +1,16 @@
 paper = paper.tex
 cfp = call-for-papers.tex
-sources = $(paper) $(cfp)
+presentation = presentation.tex
+sources = $(paper) $(cfp) $(presentation)
 llncs-class = llncs.cls
 
 .PHONY: clean reformat split-sentences indent
 
 paper: $(paper)
 	latexmk $<
+
+presentation: $(presentation)
+	latexmk -interaction=nonstopmode $<
 
 compile: $(sources)
 	latexmk $(sources)
