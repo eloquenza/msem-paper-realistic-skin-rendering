@@ -274,7 +274,7 @@ breaklinks=true,urlcolor=Blue}
   \vspace*{0.125cm}
   \mbox{~}{\bfseries Hochschule Hannover}, Fak. IV
   \hfill
-  \insertshorttitle{}
+  \insertshortauthor{} - \insertshorttitle{}
   \hfill slide \insertframenumber{} of \inserttotalframenumber
 	\vspace*{4pt}
 	}}
