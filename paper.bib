@@ -1,28 +1,56 @@
-@book{10.5555/2829183,
+@book{real-time-rendering,
 author = {Akenine-Moller, Tomas and Haines, Eric and Hoffman, Naty},
 title = {Real-Time Rendering},
-year = {2008},
-isbn = {1568814240},
+year = {2018},
+isbn = {9780429225406},
 publisher = {A. K. Peters, Ltd.},
 address = {USA},
-edition = {3rd}
+edition = {4rd}
 }
 
-@book{nguyen2007gpu,
-  title={Gpu gems 3},
-  author={Nguyen, Hubert},
-  year={2007},
-  publisher={Addison-Wesley Professional}
+@article{screen-space-subsurface,
+    author = {Jorge Jimenez and Veronica Sundstedt and Diego Gutierrez},
+    title = {Screen-space perceptual rendering of human skin},
+    journal = {ACM Transactions on Applied Perception},
+    volume = {6},
+    number = {4},
+    year = {2009},
+    pages = {23:1--23:15},
 }
 
-@misc{d2007advanced,
+@inproceedings{pre-integrated-subsurface,
+author = {Chen, Xi M. and Lambert, Timothy and Penner, Eric},
+title = {Pre-Integrated Deferred Subsurface Scattering},
+year = {2014},
+isbn = {9781450329583},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2614217.2614248},
+doi = {10.1145/2614217.2614248},
+booktitle = {ACM SIGGRAPH 2014 Posters},
+articleno = {98},
+numpages = {1},
+location = {Vancouver, Canada},
+series = {SIGGRAPH ’14}
+}
+
+@misc{advanced-realtime-skin-rendering,
   title={Advanced techniques for realistic real-time skin rendering. In nguyen (Ed.), GPU Gems 3},
   author={d'Eon, Eugene and Luebke, David},
   year={2007},
   publisher={Addison Wesley}
 }
 
-@inproceedings{10.1145/965400.965470,
+@inproceedings{kelemen2001microfacet,
+  title={A microfacet based coupled specular-matte BRDF model with importance sampling},
+  author={Kelemen, Csaba and Szirmay-Kalos, Laszlo},
+  booktitle={Eurographics short presentations},
+  volume={25},
+  pages={34},
+  year={2001}
+}
+
+@inproceedings{realistic-human-face-rendering-matrix,
 author = {Borshukov, George and Lewis, J. P.},
 title = {Realistic Human Face Rendering for “The Matrix Reloaded”},
 year = {2003},
@@ -38,7 +66,7 @@ location = {San Diego, California},
 series = {SIGGRAPH ’03}
 }
 
-@inproceedings{10.5555/2383847.2383869,
+@inproceedings{efficient-human-skin-rendering,
 author = {d’Eon, Eugene and Luebke, David and Enderton, Eric},
 title = {Efficient Rendering of Human Skin},
 year = {2007},
@@ -52,7 +80,7 @@ location = {Grenoble, France},
 series = {EGSR’07}
 }
 
-@inproceedings{DBLP:conf/rt/DachsbacherS03,
+@inproceedings{translucent-shadow-maps,
   author    = {Carsten Dachsbacher and
                Marc Stamminger},
   editor    = {Per H. Christensen and
@@ -73,7 +101,7 @@ series = {EGSR’07}
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{10.1145/344779.344855,
+@inproceedings{reflectance-field-human-face,
 author = {Debevec, Paul and Hawkins, Tim and Tchou, Chris and Duiker, Haarm-Pieter and Sarokin, Westley and Sagar, Mark},
 title = {Acquiring the Reflectance Field of a Human Face},
 year = {2000},
@@ -89,26 +117,7 @@ keywords = {rendering and lighting, facial animation, image-based modeling},
 series = {SIGGRAPH ’00}
 }
 
-@article{10.1145/1073204.1073308,
-author = {Donner, Craig and Jensen, Henrik Wann},
-title = {Light Diffusion in Multi-Layered Translucent Materials},
-year = {2005},
-issue_date = {July 2005},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {24},
-number = {3},
-issn = {0730-0301},
-url = {https://doi.org/10.1145/1073204.1073308},
-doi = {10.1145/1073204.1073308},
-journal = {ACM Trans. Graph.},
-month = jul,
-pages = {1032–1039},
-numpages = {8},
-keywords = {BSSRDF, subsurface scattering, realistic image synthesis, reflection models, light transport, layered materials, global illumination, diffusion theory}
-}
-
-@inproceedings{10.5555/2383894.2383946,
+@inproceedings{spectral-bssrdf-human-skin,
 author = {Donner, Craig and Jensen, Henrik Wann},
 title = {A Spectral BSSRDF for Shading Human Skin},
 year = {2006},
@@ -122,37 +131,6 @@ location = {Nicosia, Cyprus},
 series = {EGSR ’06}
 }
 
-@inproceedings{10.5555/2383847.2383879,
-author = {Donner, Craig and Jensen, Henrik Wann},
-title = {Rendering Translucent Materials Using Photon Diffusion},
-year = {2007},
-isbn = {9783905673524},
-publisher = {Eurographics Association},
-address = {Goslar, DEU},
-booktitle = {Proceedings of the 18th Eurographics Conference on Rendering Techniques},
-pages = {243–251},
-numpages = {9},
-location = {Grenoble, France},
-series = {EGSR’07}
-}
-
-@inproceedings{10.1145/166117.166139,
-author = {Hanrahan, Pat and Krueger, Wolfgang},
-title = {Reflection from Layered Surfaces Due to Subsurface Scattering},
-year = {1993},
-isbn = {0897916018},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/166117.166139},
-doi = {10.1145/166117.166139},
-booktitle = {Proceedings of the 20th Annual Conference on Computer Graphics and Interactive Techniques},
-pages = {165–174},
-numpages = {10},
-keywords = {reflection models, Monte Carlo, integral equations},
-location = {Anaheim, CA},
-series = {SIGGRAPH ’93}
-}
-
 @article{green2004real,
   title={Real-time approximations to subsurface scattering},
   author={Green, Simon},
@@ -163,86 +141,11 @@ series = {SIGGRAPH ’93}
   publisher={Addison-Wesley Boston, MA}
 }
 
-@inproceedings{heidrich1999realistic,
-  title={Realistic, hardware-accelerated shading and lighting},
-  author={Heidrich, Wolfgang and Seidel, Hans-Peter},
-  booktitle={Proceedings of the 26th annual conference on Computer graphics and interactive techniques},
-  pages={171--178},
-  year={1999}
-}
-
-@article{lewis2005siggraph,
-  title={Siggraph 2005 course notes-Digital Face Cloning Audience Perception of Clone Realism},
-  author={Lewis, JP},
-  journal={Siggraph 2005 Digital Face Cloning Course Notes},
-  pages={54},
-  year={2005}
-}
-
-@book{pharr2016physically,
-  title={Physically based rendering: From theory to implementation},
-  author={Pharr, Matt and Jakob, Wenzel and Humphreys, Greg},
-  year={2016},
-  publisher={Morgan Kaufmann}
-}
-
-@inproceedings{piponi2000seamless,
-  title={Seamless texture mapping of subdivision surfaces by model pelting and texture blending},
-  author={Piponi, Dan and Borshukov, George},
-  booktitle={Proceedings of the 27th annual conference on Computer graphics and interactive techniques},
-  pages={471--478},
-  year={2000}
-}
-
 @mastersthesis{poirier2004human,
   title={Human skin modelling and rendering},
   author={Poirier, Guillaume},
   year={2004},
   school={University of Waterloo}
-}
-
-@inproceedings{schlick1993customizable,
-  title={A customizable reflectance model for everyday rendering},
-  author={Schlick, Christophe},
-  booktitle={Fourth Eurographics Workshop on Rendering},
-  pages={73--83},
-  year={1993},
-  organization={Paris, France}
-}
-
-@book{marschner2015fundamentals,
-  title={Fundamentals of computer graphics},
-  author={Marschner, Steve and Shirley, Peter},
-  year={2015},
-  publisher={CRC Press}
-}
-
-@incollection{stam2001illumination,
-  title={An illumination model for a skin layer bounded by rough surfaces},
-  author={Stam, Jos},
-  booktitle={Rendering Techniques 2001},
-  pages={39--52},
-  year={2001},
-  publisher={Springer}
-}
-
-@article{tariq2006efficient,
-  title={Efficient estimation of spatially varying subsurface scattering parameters},
-  author={Tariq, Sarah and Gardner, Andrew and Llamas, Ignacio and Jones, Andrew and Debevec, Paul and Turk, Greg},
-  journal={Vision, Modeling, and Visualization (VMV2006)},
-  pages={129--136},
-  year={2006}
-}
-
-@article{wang2005all,
-  title={All-frequency interactive relighting of translucent objects with single and multiple scattering},
-  author={Wang, Rui and Tran, John and Luebke, David},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={24},
-  number={3},
-  pages={1202--1207},
-  year={2005},
-  publisher={ACM New York, NY, USA}
 }
 
 @article{weyrich2006analysis,
@@ -254,11 +157,4 @@ series = {SIGGRAPH ’93}
   pages={1013--1024},
   year={2006},
   publisher={ACM New York, NY, USA}
-}
-
-@inproceedings{tuchin2015tissue,
-  title={Tissue optics},
-  author={Tuchin, Valery V and others},
-  year={2015},
-  organization={Society of Photo-Optical Instrumentation Engineers (SPIE)}
 }
