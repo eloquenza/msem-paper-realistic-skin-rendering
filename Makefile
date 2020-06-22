@@ -7,7 +7,7 @@ llncs-class = llncs.cls
 .PHONY: clean reformat split-sentences indent
 
 paper: $(paper)
-	latexmk $<
+	latexmk -g $<
 
 presentation: $(presentation)
 	latexmk -interaction=nonstopmode $<
