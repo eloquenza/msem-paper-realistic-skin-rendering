@@ -303,8 +303,8 @@
 % Color boxes for comment
 \usepackage{tcolorbox}
 
-\newcommand{\hightodo}[1]{\todo[inline,backgroundcolor=red!90!yellow!80!white]{\textbf{\userId}: #1}}
-\newcommand{\lowtodo}[1]{\todo[inline,backgroundcolor=blue!30!white]{\textbf{\userId}: #1}}
+\newcommand{\hightodo}[1]{\todo[inline,backgroundcolor=red!90!yellow!80!white]{: #1}}
+\newcommand{\lowtodo}[1]{\todo[inline,backgroundcolor=blue!30!white]{: #1}}
 
 \newtcolorbox{tip}{colback=blue!5!white,colframe=blue!75!black}
 \newtcolorbox{tipt}[1]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=#1}
